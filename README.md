@@ -21,7 +21,7 @@ We will be using this data set to predict whether a startup is currently in oper
 
 # Model Buidling
 
-# Dummy Classifer Model
+## Dummy Classifer Model
 Dummy classifier model is a simple model that either predicts 
 1. The most frequent occuring target category
 2. A constant value prescribed by the data scientist
@@ -29,7 +29,7 @@ Dummy classifier model is a simple model that either predicts
 
 This dummy model as you may have guessed does not take the relationship between the feature variables and target variables into account for predicting the target class. The primary reason for using a dummy variable model is to compare the evaluation scores obtained by this model against the evaluation scores obtained by the actual model that you will be building. If the evaluation score built by your model is less than that of the dummy model then we need to definitely rethink about either fine tuning our existing model or building a new model.
 
-# Random Classifer Model
+## Random Classifer Model
 Just as a reminder Random Forest is a powerful decision tree ensemble model that can be used for both regression and classification model. I have used this model since it is easy to interpret.
 
 As we have seen previously, the data set is a highly imbalanced data set. One approach to solve this issue is by data augmentation — you can either up sample the minority class or down sample the majority class. In this project we have used a technique described by Nitesh Chawla called SMOTE: Synthetic Minority Over-sampling Technique . Basically, SMOTE works by selecting examples that are close in the feature space, drawing a line between the examples in the feature space and drawing a new sample at a point along that line.
